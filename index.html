@@ -1,60 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Website</title>
   <style>
-    /* Header sebagai container logo + nav */
     nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 10px 20px;
-      max-width: auto;
-      margin:0; /* center nav bar */
+      border-bottom: 2px solid black;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    /* Logo */
     .logo img {
-      width: 200px;
+      width: 150px;
       height: auto;
-
     }
 
-    /* Menu links */
     .menu a {
-      margin-left: 5px;
+      margin-left: 10px;
       color: black;
       text-decoration: none;
       font-weight: bold;
-
-      border: 1px solid black;   
-      padding: 5px 10px;         
+      border: 1px solid black;
+      padding: 5px 10px;
       border-radius: 5px;
     }
 
-    /* Hover effect */
     .menu a:hover {
       text-decoration: underline;
     }
 
-    main{
-        padding: 20px;
-        margin: 20px;
+    h1, h2, h3, p {
+      margin: 0;
+      padding: 0;
     }
 
-    h1, h2, h3, p, hr{
-      margin: auto;   /* hilangkan margin */
-      padding: auto;  /* kalau mau total bersih */
-   }
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
 
-   .container {
+    .container {
       display: flex;
       gap: 30px;
-      padding: 20px;
-      max-width: 800px;
-      margin: 40px auto;
+      margin-top: 20px;
     }
 
     form {
@@ -71,10 +65,11 @@
     form textarea {
       width: 250px;
       padding: 5px;
+      margin-bottom: 10px;
     }
 
     .gender {
-      margin-top: 5px;
+      margin: 5px 0 10px 0;
     }
 
     button {
@@ -84,73 +79,76 @@
 
     .output {
       flex: 1;
-      border: 1px solid #000;
-      padding: 10px;
+      border: 1px solid black;
+      padding: 15px;
     }
 
     footer {
-      border-top: 2px solid #000;
+      border-top: 2px solid black;
       padding: 10px;
       text-align: right;
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 900px;
+      margin: 30px auto 0;
     }
-
   </style>
 </head>
-
 <body>
-    <hr/>
   <nav>
     <div class="logo">
-      <img src="Revou.jpeg" alt="Logo RevoU">
+      <img src="Revou.jpeg" alt="Logo RevoU" />
     </div>
     <div class="menu">
       <a href="index.html">Home</a>
-      <a href="our profile.html">Our Profile</a>
+      <a href="our_profile.html">Our Profile</a>
       <a href="portofolio.html">Portofolio</a>
       <a href="message.html">Message Us</a>
     </div>
   </nav>
-  <hr/>
-   <main>
-      <h2>Hi Kaylee, Welcome To Website!</h2>
-      <p>Ini adalah Website Latihan Pertama.<p>
-    </main>
-    
-    <img src="1716261359328_linkedin cover revou copy.webp" alt="Pembukaan" height="auto" width="auto">
-    <hr/>
 
-    <main>
-        <h2>Our Headquarter</h2>
-    </main>
-    <hr/>     
+  <main>
+    <h2>Hi Kaylee, Welcome To Website!</h2>
+    <p>Ini adalah Website Latihan Pertama.</p>
 
+    <img src="1716261359328_linkedin cover revou copy.webp" alt="Banner" width="100%"/>
 
+    <h2>Our Headquarter</h2>
+
+    <!-- Container untuk form dan output -->
     <div class="container">
+      <div class="form-box">
         <h2>Message Us</h2>
-        <br/>
-
         <form id="messageForm">
-            <label>Nama :</label>
-             <input type="text" placeholder="Nama"/> 
-            <br/>
-            <label>Tanggal  Lahir: </label>
-             <input type="date"/> 
-            <br/>
-            <label>Jenis Kelamin: </label>
-            <input type="radio" value="male" name="Jenis-kelamin">Laki-laki
-            <input type="radio" value="female" name="Jenis-kelamin">Perempuan
-            <br/>
-            <label>Pesan: </label>
-            <textarea rows="5" cols="30" placeholder="Tuliskan komentar kamu disini!"></textarea>
-            <br/>
-            <button type="sumbit">send</button>
+          <label>Nama:</label>
+          <input type="text" placeholder="Nama"/><br/>
+          
+          <label>Tanggal Lahir:</label>
+          <input type="date"/><br/>
+          
+          <label>Jenis Kelamin:</label>
+          <div class="gender">
+            <input type="radio" name="gender" value="Laki-Laki"/> Laki-Laki
+            <input type="radio" name="gender" value="Perempuan"/> Perempuan
+          </div>
 
+          <label>Pesan:</label>
+          <textarea rows="5" placeholder="Tuliskan komentar kamu disini!"></textarea><br/>
 
+          <button type="submit">Submit</button>
         </form>
-    </main>
-    <hr/>     
+      </div>
 
+      <div class="output">
+        <p><strong>Current time:</strong> [Current Time]</p>
+        <p><strong>Nama:</strong> Harfi Novian</p>
+        <p><strong>Tanggal Lahir:</strong> 01/11/1995</p>
+        <p><strong>Jenis Kelamin:</strong> Laki-Laki</p>
+        <p><strong>Pesan:</strong> Lagi belajar buat website</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Created by RevoU
+  </footer>
 </body>
 </html>
